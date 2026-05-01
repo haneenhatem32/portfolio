@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haneen | UI & UX Designer</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- JS Components -->
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <style>
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 80vh;
+            position: relative;
+            padding-top: 2rem;
+        }
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            z-index: 2;
+        }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: rgba(94, 189, 178, 0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        .hero h1 span {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+        }
+        .hero-image-wrapper {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+        }
+        .hero-image {
+            max-width: 450px;
+            width: 100%;
+            border-radius: 20px;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            transition: transform var(--transition-slow);
+        }
+        
+        /* What I Do Section */
+        .services-grid {
+            margin-top: 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 4rem;
+            }
+            .hero-content { margin-bottom: 3rem; }
+            .hero-actions { justify-content: center; }
+            .hero-image-wrapper { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <site-navbar></site-navbar>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="container hero">
+            <div class="hero-content animate-on-scroll">
+                <div class="hero-badge">👋 Hello there</div>
+                <h1>UI & UX<br><span>Designer</span></h1>
+                <p>Hi, I'm <strong style="color: var(--primary);">Haneen</strong>, a passionate UI/UX designer creating impactful and beautiful digital experiences.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
+                    <a href="projects.html" class="btn btn-outline">View Portfolio</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper animate-on-scroll">
+                <img src="IMG-20241130-WA0067%201.png" alt="Haneen - UI/UX Designer" class="hero-image">
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>What I Do</h2>
+                </div>
+                
+                <div class="grid grid-3 services-grid">
+                    <!-- Service 1 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">🔍</div>
+                        <h3>User Research</h3>
+                        <p style="font-size: 0.9rem;">Understanding user needs through qualitative and quantitative research methods.</p>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">✏️</div>
+                        <h3>Wireframing</h3>
+                        <p style="font-size: 0.9rem;">Translating concepts into structured layouts and intuitive user flows.</p>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">🎨</div>
+                        <h3>UI Design</h3>
+                        <p style="font-size: 0.9rem;">Creating visually stunning interfaces with cohesive design systems.</p>
+                    </div>
+                    <!-- Service 4 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">📱</div>
+                        <h3>Prototyping</h3>
+                        <p style="font-size: 0.9rem;">Building interactive mockups to test and validate ideas quickly.</p>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">🧪</div>
+                        <h3>Usability Testing</h3>
+                        <p style="font-size: 0.9rem;">Evaluating interfaces with real users to ensure seamless experiences.</p>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="card icon-card hover-lift animate-on-scroll">
+                        <div class="icon-container">🧩</div>
+                        <h3>Design Systems</h3>
+                        <p style="font-size: 0.9rem;">Establishing reusable components for scalable and consistent design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Work Section (Preview) -->
+        <section class="section" style="background-color: #111b1d;">
+            <div class="container">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;" class="animate-on-scroll">
+                    <div>
+                        <h2 style="margin-bottom: 0.5rem; font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-heading);">Latest Work</h2>
+                        <p style="margin-bottom: 0;">A selection of my recent UI/UX design projects.</p>
+                    </div>
+                    <a href="projects.html" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View All</a>
+                </div>
+
+                <div class="grid grid-2">
+                    <!-- Project 1 -->
+                    <div class="card project-card animate-on-scroll">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=800&auto=format&fit=crop" alt="Booky App UI" class="card-image">
+                        </div>
+                        <div class="project-card-content">
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span class="badge">UI Design</span>
+                                <span class="badge">Mobile App</span>
+                            </div>
+                            <h3>Booky App</h3>
+                            <p>An engaging digital reading platform making books accessible and building a reading community.</p>
+                            <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="card project-card animate-on-scroll">
+                        <div class="card-image-container">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Dashboard UI" class="card-image">
+                        </div>
+                        <div class="project-card-content">
+                            <div style="display: flex; gap: 0.5rem;">
+                                <span class="badge">Web App</span>
+                                <span class="badge">Dashboard</span>
+                            </div>
+                            <h3>DataViz Dashboard</h3>
+                            <p>A comprehensive analytics dashboard for tracking performance metrics with intuitive data visualization.</p>
+                            <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+</html>

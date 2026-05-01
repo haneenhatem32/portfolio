@@ -1,0 +1,166 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: none;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #152224;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(94, 189, 178, 0.3);
+  color: #152224;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #152224;
+  transform: translateY(-2px);
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-card);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: var(--spacing-md);
+  background-color: rgba(255, 255, 255, 0.05); /* Placeholder */
+}
+
+/* Project Cards Specific */
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card .card-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.project-card .card-image {
+  margin-bottom: 0;
+  border-radius: 16px 16px 0 0;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.project-card-content {
+  padding: var(--spacing-lg);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background-color: rgba(94, 189, 178, 0.1);
+  color: var(--primary);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+  align-self: flex-start;
+}
+
+/* Icon Cards (Services) */
+.icon-card {
+  text-align: center;
+  align-items: center;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(94, 189, 178, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+  color: var(--primary);
+  font-size: 1.5rem;
+  transition: all var(--transition-normal);
+}
+
+.icon-card:hover .icon-container {
+  background-color: var(--primary);
+  color: #152224;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Forms */
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  transition: border-color var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(94, 189, 178, 0.2);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}

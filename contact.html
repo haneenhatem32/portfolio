@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Haneen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .contact-container { padding: 2rem; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <site-navbar></site-navbar>
+
+    <main class="container section" style="min-height: 80vh; display: flex; align-items: center;">
+        
+        <div class="contact-container animate-on-scroll" style="width: 100%;">
+            <div class="contact-header">
+                <h1 style="font-size: clamp(2rem, 4vw, 3rem);">Let's Work Together</h1>
+                <p>Have a project in mind or just want to say hi? Feel free to reach out. I'm currently open for new freelance opportunities.</p>
+            </div>
+
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input type="text" id="subject" class="form-control" placeholder="Project Inquiry" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" class="form-control" placeholder="Tell me about your project..." required></textarea>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 200px;">Send Message</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Haneen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: var(--spacing-xxl);
+        }
+        .about-image {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 20px 20px 0 var(--primary);
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 15px;
+            height: 100%; width: 2px;
+            background: var(--border-color);
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 5px; left: 8px;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            box-shadow: 0 0 0 4px var(--bg-color);
+        }
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .timeline-content {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .about-image { box-shadow: 10px 10px 0 var(--primary); }
+        }
+    </style>
+</head>
+<body>
+
+    <site-navbar></site-navbar>
+
+    <main class="container section">
+        
+        <div class="about-grid animate-on-scroll">
+            <div>
+                <img src="IMG-20241130-WA0067%201.png" alt="Haneen working" class="about-image">
+            </div>
+            <div>
+                <h1 style="margin-bottom: 1.5rem;">About Me</h1>
+                <p>Hello! I'm Haneen, a UI/UX Designer dedicated to creating meaningful and engaging digital experiences. I bridge the gap between user needs and business goals through thoughtful design and research.</p>
+                <p>With a background in Computer and Information Science, I bring an analytical approach to design problem-solving. My focus is always on clarity, accessibility, and visual delight.</p>
+                <p>When I'm not pushing pixels, you can find me exploring new coffee shops or reading about the latest design trends.</p>
+                <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="section-header animate-on-scroll">
+            <h2>Education & Training</h2>
+        </div>
+
+        <div class="timeline animate-on-scroll">
+            <div class="timeline-item">
+                <div class="timeline-date">2019 - 2023</div>
+                <div class="timeline-content hover-lift">
+                    <h3>Computer and Information Science</h3>
+                    <p style="margin: 0;">Bachelor's Degree</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">June 2023 - Sept 2023</div>
+                <div class="timeline-content hover-lift">
+                    <h3>UI/UX Internship</h3>
+                    <p style="margin: 0;">Worked closely with product managers and developers to design functional interfaces.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Oct 2023 - Jan 2024</div>
+                <div class="timeline-content hover-lift">
+                    <h3>Intensive UI/UX Course</h3>
+                    <p style="margin: 0;">Mastered advanced prototyping, design systems, and usability testing methodologies.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+</html>

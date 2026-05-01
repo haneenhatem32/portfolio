@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Haneen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-body);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary);
+            color: #152224;
+            border-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <site-navbar></site-navbar>
+
+    <main class="container section">
+        <div class="section-header animate-on-scroll">
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">My Projects</h1>
+            <p style="max-width: 600px; margin: 0 auto;">Explore my recent work spanning UI design, UX research, and comprehensive design systems.</p>
+        </div>
+
+        <div class="filter-container animate-on-scroll">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Mobile App</button>
+            <button class="filter-btn">Web App</button>
+            <button class="filter-btn">Dashboard</button>
+        </div>
+
+        <div class="grid grid-2">
+            <!-- Project 1 -->
+            <div class="card project-card animate-on-scroll">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=800&auto=format&fit=crop" alt="Booky App UI" class="card-image">
+                </div>
+                <div class="project-card-content">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span class="badge">UI Design</span>
+                        <span class="badge">Mobile App</span>
+                    </div>
+                    <h3>Booky App</h3>
+                    <p>An engaging digital reading platform making books accessible and building a reading community.</p>
+                    <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="card project-card animate-on-scroll">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Dashboard UI" class="card-image">
+                </div>
+                <div class="project-card-content">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span class="badge">Web App</span>
+                        <span class="badge">Dashboard</span>
+                    </div>
+                    <h3>DataViz Dashboard</h3>
+                    <p>A comprehensive analytics dashboard for tracking performance metrics with intuitive data visualization.</p>
+                    <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card project-card animate-on-scroll">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?q=80&w=800&auto=format&fit=crop" alt="Coffee Shop UI" class="card-image">
+                </div>
+                <div class="project-card-content">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span class="badge">UX Design</span>
+                        <span class="badge">Mobile App</span>
+                    </div>
+                    <h3>Coffio App</h3>
+                    <p>A seamless coffee ordering experience with loyalty tracking and personalized recommendations.</p>
+                    <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card project-card animate-on-scroll">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Finance App UI" class="card-image">
+                </div>
+                <div class="project-card-content">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span class="badge">UI/UX</span>
+                        <span class="badge">Web App</span>
+                    </div>
+                    <h3>Wealth Manage</h3>
+                    <p>Personal finance tracking application with smart budget recommendations and goal setting.</p>
+                    <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+</html>

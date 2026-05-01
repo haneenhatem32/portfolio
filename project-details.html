@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booky App Case Study | Haneen</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script src="js/components.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <style>
+        .cs-hero {
+            position: relative;
+            height: 60vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin-bottom: var(--spacing-xl);
+            border-radius: 0 0 40px 40px;
+        }
+        .cs-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(21, 34, 36, 0.3), rgba(21, 34, 36, 1));
+            z-index: 1;
+        }
+        .cs-hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+        .cs-hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 var(--spacing-lg);
+        }
+        .cs-meta {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        .cs-meta-item h4 {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .cs-meta-item p { margin-bottom: 0; color: var(--text-main); font-weight: 500; }
+        
+        .cs-section { margin-bottom: var(--spacing-xl); }
+        .cs-img-full {
+            width: 100%;
+            border-radius: 16px;
+            margin: var(--spacing-lg) 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <site-navbar></site-navbar>
+
+    <div class="cs-hero animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?q=80&w=1600&auto=format&fit=crop" alt="Booky App Background" class="cs-hero-bg">
+        <div class="cs-hero-content">
+            <span class="badge" style="background-color: var(--primary); color: #152224; margin-bottom: 1rem;">UI Design / Mobile App</span>
+            <h1 style="font-size: clamp(3rem, 5vw, 4.5rem);">Booky App Case Study</h1>
+            <p style="color: #fff; font-size: 1.2rem;">Redesigning the digital reading experience for the modern user.</p>
+        </div>
+    </div>
+
+    <main class="container" style="max-width: 900px;">
+        <div class="cs-meta animate-on-scroll">
+            <div class="cs-meta-item" style="flex: 1;">
+                <h4>Role</h4>
+                <p>Lead UI/UX Designer</p>
+            </div>
+            <div class="cs-meta-item" style="flex: 1;">
+                <h4>Timeline</h4>
+                <p>3 Months</p>
+            </div>
+            <div class="cs-meta-item" style="flex: 1;">
+                <h4>Tools</h4>
+                <p>Figma, FigJam, Notion</p>
+            </div>
+        </div>
+
+        <div class="cs-section animate-on-scroll">
+            <h2>Overview</h2>
+            <p>Booky is a conceptual reading app designed to make discovering, tracking, and reading books a seamless and highly social experience. The primary challenge was to design an interface that felt cozy and immersive while providing powerful organizational tools for avid readers.</p>
+            <p>Through iterative design and user testing, we landed on a vibrant yet clean aesthetic that highlights book covers and user progress.</p>
+        </div>
+
+        <div class="cs-section animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1000&auto=format&fit=crop" alt="Wireframes" class="cs-img-full">
+        </div>
+
+        <div class="cs-section animate-on-scroll">
+            <h2>The Challenge</h2>
+            <p>Users reported feeling overwhelmed by existing reading apps, which often prioritize store features over the reading experience itself. The goal was to create a "digital bookshelf" that felt personal.</p>
+            <ul>
+                <li style="margin-bottom: 0.5rem;">• Simplify the discovery process for new books.</li>
+                <li style="margin-bottom: 0.5rem;">• Create an engaging reading tracking system.</li>
+                <li style="margin-bottom: 0.5rem;">• Design a comfortable dark mode for night readers.</li>
+            </ul>
+        </div>
+
+        <div class="cs-section animate-on-scroll">
+            <h2>Final Design</h2>
+            <p>The final high-fidelity mockups focus on large, beautiful typography and rich imagery. A subtle glassmorphism effect was used for overlays to maintain context without sacrificing legibility.</p>
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1000&auto=format&fit=crop" alt="High Fidelity Screens" class="cs-img-full">
+        </div>
+
+        <div style="text-align: center; margin: var(--spacing-xl) 0;" class="animate-on-scroll">
+            <a href="projects.html" class="btn btn-outline">← Back to Projects</a>
+        </div>
+    </main>
+
+    <site-footer></site-footer>
+
+</body>
+</html>
