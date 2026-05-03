@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haneen | UI & UX Designer</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
-    
+
     <!-- JS Components -->
     <script src="js/components.js" defer></script>
     <script src="js/main.js" defer></script>
@@ -23,11 +27,13 @@
             position: relative;
             padding-top: 2rem;
         }
+
         .hero-content {
             flex: 1;
             max-width: 600px;
             z-index: 2;
         }
+
         .hero-badge {
             display: inline-block;
             padding: 0.5rem 1rem;
@@ -39,38 +45,44 @@
             margin-bottom: 1.5rem;
             letter-spacing: 1px;
         }
+
         .hero h1 {
             font-size: clamp(3rem, 6vw, 5rem);
             margin-bottom: 1rem;
             line-height: 1.1;
         }
+
         .hero h1 span {
             color: var(--text-muted);
             font-weight: 400;
         }
+
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             max-width: 500px;
         }
+
         .hero-actions {
             display: flex;
             gap: 1rem;
         }
+
         .hero-image-wrapper {
             flex: 1;
             display: flex;
             justify-content: flex-end;
             position: relative;
         }
+
         .hero-image {
             max-width: 450px;
             width: 100%;
             border-radius: 20px;
-            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
             transition: transform var(--transition-slow);
         }
-        
+
         /* What I Do Section */
         .services-grid {
             margin-top: 3rem;
@@ -83,12 +95,22 @@
                 text-align: center;
                 padding-top: 4rem;
             }
-            .hero-content { margin-bottom: 3rem; }
-            .hero-actions { justify-content: center; }
-            .hero-image-wrapper { justify-content: center; }
+
+            .hero-content {
+                margin-bottom: 3rem;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                justify-content: center;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <site-navbar></site-navbar>
@@ -99,74 +121,73 @@
             <div class="hero-content animate-on-scroll">
                 <div class="hero-badge">👋 Hello there</div>
                 <h1>UI & UX<br><span>Designer</span></h1>
-                <p>Hi, I'm <strong style="color: var(--primary);">Haneen</strong>, a passionate UI/UX designer creating impactful and beautiful digital experiences.</p>
+                <p>Hi, I'm <strong style="color: var(--primary);">Haneen</strong>, a passionate UI/UX designer creating
+                    impactful and beautiful digital experiences.</p>
                 <div class="hero-actions">
                     <a href="contact.html" class="btn btn-primary">Let's Work Together</a>
                     <a href="projects.html" class="btn btn-outline">View Portfolio</a>
                 </div>
             </div>
             <div class="hero-image-wrapper animate-on-scroll">
-                <img src="IMG-20241130-WA0067%201.png" alt="Haneen - UI/UX Designer" class="hero-image">
+                <img src="haneen.png" alt="Haneen - UI/UX Designer" class="hero-image">
             </div>
         </section>
 
-       <!-- What I Do Section -->
-        <section class="section">
+        <!-- What I Do Section -->
+        <section class="section" id="services">
             <div class="container">
                 <div class="section-header animate-on-scroll">
                     <h2>What I Do</h2>
+                    <p style="color: var(--text-muted); margin-top: 10px;">Clear process. Clean design. Real results.</p>
                 </div>
-                
-                <div class="services-grid-new">
-                    <!-- Research Group -->
-                    <h3 class="service-group-header animate-on-scroll">Research</h3>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">🔍</div>
-                            <h4 class="glass-card-title">User Research</h4>
-                        </div>
-                        <p class="glass-card-desc">Understanding user needs and behaviors through qualitative and quantitative research methods to inform design decisions.</p>
-                    </div>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">🧪</div>
-                            <h4 class="glass-card-title">Usability Testing</h4>
-                        </div>
-                        <p class="glass-card-desc">Evaluating interfaces with real users to identify pain points and ensure a seamless, intuitive experience.</p>
+
+                <div class="wid-grid">
+                    <div class="wid-card animate-on-scroll" data-category="research">
+                        <div class="wid-card-num">01</div>
+                        <div class="wid-card-icon">🔍</div>
+                        <div class="wid-card-tag">Research</div>
+                        <div class="wid-card-title">User Research</div>
+                        <div class="wid-card-desc">Understanding user behavior to guide decisions.</div>
                     </div>
 
-                    <!-- Design Group -->
-                    <h3 class="service-group-header animate-on-scroll" style="margin-top: 2rem;">Design</h3>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">✏️</div>
-                            <h4 class="glass-card-title">Wireframing</h4>
-                        </div>
-                        <p class="glass-card-desc">Translating concepts into structured layouts and intuitive user flows before moving to high-fidelity designs.</p>
-                    </div>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">🎨</div>
-                            <h4 class="glass-card-title">UI Design</h4>
-                        </div>
-                        <p class="glass-card-desc">Creating visually stunning interfaces with cohesive design systems, typography, and color palettes.</p>
+                    <div class="wid-card animate-on-scroll" data-category="research">
+                        <div class="wid-card-num">02</div>
+                        <div class="wid-card-icon">🧪</div>
+                        <div class="wid-card-tag">Research</div>
+                        <div class="wid-card-title">Usability Testing</div>
+                        <div class="wid-card-desc">Finding friction points in real usage.</div>
                     </div>
 
-                    <!-- Build & Test Group -->
-                    <h3 class="service-group-header animate-on-scroll" style="margin-top: 2rem;">Build & Scale</h3>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">📱</div>
-                            <h4 class="glass-card-title">Prototyping</h4>
-                        </div>
-                        <p class="glass-card-desc">Building interactive, high-fidelity mockups to validate ideas, demonstrate micro-interactions, and gather feedback.</p>
+                    <div class="wid-card animate-on-scroll" data-category="design">
+                        <div class="wid-card-num">03</div>
+                        <div class="wid-card-icon">✏️</div>
+                        <div class="wid-card-tag">Design</div>
+                        <div class="wid-card-title">Wireframing</div>
+                        <div class="wid-card-desc">Structuring layouts before visual design.</div>
                     </div>
-                    <div class="glass-card animate-on-scroll">
-                        <div class="glass-card-header">
-                            <div class="glass-card-icon">🧩</div>
-                            <h4 class="glass-card-title">Design Systems</h4>
-                        </div>
-                        <p class="glass-card-desc">Establishing reusable components for scalable, consistent design and seamless developer handoff.</p>
+
+                    <div class="wid-card animate-on-scroll" data-category="design">
+                        <div class="wid-card-num">04</div>
+                        <div class="wid-card-icon">🎨</div>
+                        <div class="wid-card-tag">Design</div>
+                        <div class="wid-card-title">UI Design</div>
+                        <div class="wid-card-desc">Crafting clean and consistent interfaces.</div>
+                    </div>
+
+                    <div class="wid-card animate-on-scroll" data-category="build">
+                        <div class="wid-card-num">05</div>
+                        <div class="wid-card-icon">📱</div>
+                        <div class="wid-card-tag">Build</div>
+                        <div class="wid-card-title">Prototyping</div>
+                        <div class="wid-card-desc">Interactive flows to test ideas quickly.</div>
+                    </div>
+
+                    <div class="wid-card animate-on-scroll" data-category="build">
+                        <div class="wid-card-num">06</div>
+                        <div class="wid-card-icon">🧩</div>
+                        <div class="wid-card-tag">Build</div>
+                        <div class="wid-card-title">Design Systems</div>
+                        <div class="wid-card-desc">Scalable components for consistency.</div>
                     </div>
                 </div>
             </div>
@@ -175,19 +196,23 @@
         <!-- Latest Work Section (Preview) -->
         <section class="section" style="background-color: #111b1d;">
             <div class="container">
-                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;" class="animate-on-scroll">
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;"
+                    class="animate-on-scroll">
                     <div>
-                        <h2 style="margin-bottom: 0.5rem; font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-heading);">Latest Work</h2>
+                        <h2
+                            style="margin-bottom: 0.5rem; font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-heading);">
+                            Latest Work</h2>
                         <p style="margin-bottom: 0;">A selection of my recent UI/UX design projects.</p>
                     </div>
-                    <a href="projects.html" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View All</a>
+                    <a href="projects.html" class="btn btn-outline"
+                        style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">View All</a>
                 </div>
 
                 <div class="grid grid-2">
                     <!-- Project 1 -->
                     <div class="card project-card animate-on-scroll">
                         <div class="card-image-container">
-                            <img src="photo_2026-05-03_16-36-20" alt="Staya" class="card-image">
+                            <img src="staya.jpg" alt="Staya" class="card-image">
                         </div>
                         <div class="project-card-content">
                             <div style="display: flex; gap: 0.5rem;">
@@ -196,23 +221,28 @@
                             </div>
                             <h3>Staya App</h3>
                             <p>creating a seamless and secure booking experience tailored to local needs.</p>
-                            <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                            <a href="https://www.behance.net/gallery/248236511/Staya-Short-Stay-Booking-App"
+                                style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View
+                                Case Study <span>→</span></a>
                         </div>
                     </div>
-                    
+
                     <!-- Project 2 -->
                     <div class="card project-card animate-on-scroll">
                         <div class="card-image-container">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Dashboard UI" class="card-image">
+                            <img src="Fixit.png"
+                                alt="FixiT" class="card-image">
                         </div>
                         <div class="project-card-content">
                             <div style="display: flex; gap: 0.5rem;">
-                                <span class="badge">Web App</span>
-                                <span class="badge">Dashboard</span>
+                               <span class="badge">UI Design</span>
+                                <span class="badge">Mobile App</span>
                             </div>
-                            <h3>DataViz Dashboard</h3>
-                            <p>A comprehensive analytics dashboard for tracking performance metrics with intuitive data visualization.</p>
-                            <a href="project-details.html" style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View Case Study <span>→</span></a>
+                            <h3>FixiT App</h3>
+                            <p>A trusted platform connecting users with qualified tradespeople for various home services.</p>
+                            <a href="https://www.behance.net/gallery/246401169/FixiT-App"
+                                style="margin-top: auto; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">View
+                                Case Study <span>→</span></a>
                         </div>
                     </div>
                 </div>
@@ -223,5 +253,5 @@
     <site-footer></site-footer>
 
 </body>
-</html>
 
+</html>
