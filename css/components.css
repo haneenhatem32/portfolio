@@ -74,22 +74,18 @@
   width: 100%;
   height: 280px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   background-color: rgba(255, 255, 255, 0.03);
-  padding: 1rem;
 }
 
 .project-card .card-image {
   margin-bottom: 0;
-  border-radius: 12px;
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  object-position: center;
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
   transition: transform 0.5s ease;
 }
 
@@ -370,4 +366,3 @@ textarea.form-control {
   resize: vertical;
   min-height: 120px;
 }
-
