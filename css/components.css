@@ -106,30 +106,226 @@
   align-self: flex-start;
 }
 
-/* Icon Cards (Services) */
-.icon-card {
-  text-align: center;
-  align-items: center;
+/* Glassmorphism Services Card */
+.glass-card {
+  background: rgba(30, 47, 50, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.icon-container {
-  width: 60px;
-  height: 60px;
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(94, 189, 178, 0.1);
+  border-color: rgba(94, 189, 178, 0.4);
+}
+
+.glass-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.glass-card-icon {
+  width: 48px;
+  height: 48px;
   background-color: rgba(94, 189, 178, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: var(--spacing-md);
   color: var(--primary);
-  font-size: 1.5rem;
-  transition: all var(--transition-normal);
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
 }
 
-.icon-card:hover .icon-container {
+.glass-card:hover .glass-card-icon {
   background-color: var(--primary);
   color: #152224;
   transform: scale(1.1) rotate(5deg);
+}
+
+.glass-card-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.glass-card-desc {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── What I Do Section (New) ── */
+.wid-tabs {
+  margin: 40px 0;
+  display: flex;
+  gap: 10px;
+}
+
+.wid-tab-btn {
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: .3s;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.wid-tab-btn.active {
+  background: var(--primary);
+  color: #152224; /* Dark color for text on primary background */
+}
+
+.wid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media(max-width: 900px) {
+  .wid-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 600px) {
+  .wid-grid { grid-template-columns: 1fr; }
+}
+
+.wid-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.3s;
+  overflow: hidden;
+}
+
+.wid-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 0; height: 3px;
+  background: linear-gradient(90deg, var(--primary), #90caf9);
+  transition: width 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.wid-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(94, 189, 178, 0.4);
+}
+
+.wid-card:hover::after {
+  width: 100%;
+}
+
+.wid-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 16px;
+  background: radial-gradient(400px circle at var(--mx, 50%) var(--my, 50%), rgba(94, 189, 178, 0.12), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.wid-card:hover::before {
+  opacity: 1;
+}
+
+.wid-card-num {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  transition: color 0.4s;
+  user-select: none;
+  z-index: 0;
+}
+
+.wid-card:hover .wid-card-num {
+  color: rgba(94, 189, 178, 0.1);
+}
+
+.wid-card-icon {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  transition: background 0.3s, transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+
+.wid-card:hover .wid-card-icon {
+  background: rgba(94, 189, 178, 0.15);
+  transform: rotate(-8deg) scale(1.1);
+}
+
+.wid-card-tag {
+  position: relative;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.wid-card-title {
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary);
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+.wid-card:hover .wid-card-title {
+  color: #fff;
+}
+
+.wid-card-desc {
+  position: relative;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  z-index: 1;
 }
 
 /* Forms */
