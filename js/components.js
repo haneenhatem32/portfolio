@@ -82,7 +82,7 @@ class SiteNavbar extends HTMLElement {
             <a href="projects.html" class="nav-link ${isProjects ? 'active' : ''}">Work</a>
             <a href="about.html" class="nav-link ${isAbout ? 'active' : ''}">About Me</a>
             <a href="contact.html" class="nav-link ${isContact ? 'active' : ''}">Contact</a>
-            <a href="#" class="btn btn-primary" style="padding: 0.5rem 1.2rem;">Resume</a>
+            <a href="https://drive.google.com/file/d/1YULKAzifE0RoWCRX6tCtOPXU8TARjhae/view?usp=drivesdk" target="_blank" class="btn btn-primary" style="padding: 0.5rem 1.2rem;">Resume</a>
           </div>
         </div>
       </nav>
@@ -137,10 +137,8 @@ class SiteFooter extends HTMLElement {
       <footer class="footer">
         <div class="container">
           <div class="social-links">
-            <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-            <a href="#" class="social-link" aria-label="Behance">Be</a>
-            <a href="#" class="social-link" aria-label="Dribbble">Dr</a>
-            <a href="#" class="social-link" aria-label="Twitter">Tw</a>
+            <a href="https://www.linkedin.com/in/haneen-hatem-a944312a3" target="_blank" class="social-link" aria-label="LinkedIn">in</a>
+            <a href="https://www.behance.net/haneenagamyy" target="_blank" class="social-link" aria-label="Behance">Be</a>
           </div>
           <p>© ${new Date().getFullYear()} Haneen. All rights reserved.</p>
         </div>
@@ -151,3 +149,4 @@ class SiteFooter extends HTMLElement {
 
 customElements.define('site-navbar', SiteNavbar);
 customElements.define('site-footer', SiteFooter);
+
